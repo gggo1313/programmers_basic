@@ -20,6 +20,15 @@ function solution2 (x, n) {
     return Array(n).fill(x).map((v, i) => (i + 1) * v)
 }
 
+// 다른 사람 답변2
+function solution3 ( x, n) {
+    return [...Array(n).keys()].map(v => (v + 1) * x);
+}
+
 console.log(solution2(2, 5));
 console.log(solution2(4, 3));
 console.log(solution2(-4, 2));
+
+console.log(solution3(2, 5));
+console.log(solution3(4, 3));
+console.log(solution3(-4, 2));
