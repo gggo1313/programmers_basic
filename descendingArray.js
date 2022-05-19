@@ -25,6 +25,8 @@ function solution2 (n) {
 
 function solution3 (n) {
     return parseInt((n + "").split("").sort().reverse().join(""));
+    // parseInt말고도 * 1로 숫자형 변환 가능
+    // return (n + "").split("").sort().reverse().join("") * 1
 }
 
 console.log("2: ", solution2(118372));
