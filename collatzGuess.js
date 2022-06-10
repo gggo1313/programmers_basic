@@ -33,6 +33,7 @@ console.log("return: " + solution(8));
 console.log("return: " + solution(626331));
 
 // 다른 사람 답변
+// 가장 깔끔하고 직관적인 코드
 function collatz(num) {
     let answer = 0;
     while(num != 1 && answer != 500) {
@@ -43,6 +44,7 @@ function collatz(num) {
     return num == 1 ? answer : -1;
 }
 
+// 재귀함수로 간단하게
 function collatz2(num, count = 0) {
     return num == 1 ? (count >= 500 ? -1 : count) : collatz2(num % 2 == 0 ? num = num / 2 : num = num * 3 + 1, ++count);
 }
