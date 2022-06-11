@@ -58,3 +58,10 @@ function caesar (s, n) {
 
     return result;
 };
+
+// upper, lower와 index > arr.length 경우를 모두 고려하여 한 번에 계산하는 방법
+function solution2 (s, n) {
+    var chars = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXY";
+    return s.split('').map(e => chars[chars.indexOf(e) + n]).join('');
+};
+
