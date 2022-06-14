@@ -35,8 +35,6 @@ function solution2 (n) {
     s.delete(1);
     s.add(2);
 
-    console.log(typeof s);
-
     // n <= j^2
     for (let j = 3; j <= Math.sqrt(n); j += 2) {
         if (s.has(j)) {
