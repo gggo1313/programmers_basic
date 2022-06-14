@@ -7,7 +7,6 @@
 // 입력 형식 예) "1S2D*3T"
 
 function solution (dartResult) {
-    const score = 0;
     const answer = [];
     let temp = 0;
 
