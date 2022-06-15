@@ -47,14 +47,14 @@ function solution (N, stages) {
 let stages1 = [2, 1, 2, 6, 2, 4, 3, 3];
 let stages2 = [4, 4, 4, 4, 4];
 
-// console.log(solution(5, stages1));
-// console.log(solution(4, stages2));
+console.log(solution(5, stages1));
+console.log(solution(4, stages2));
 
 // 다른 사람 풀이
 function solution2 (N, stages) {
     let result = [];
 
-    for (let i = 1; 1 <= N; i++) {
+    for (let i = 1; i <= N; i++) {
         let reach = stages.filter((x) => x >= i).length;
         let curr = stages.filter((x) => x === i).length;
 
@@ -68,6 +68,6 @@ function solution2 (N, stages) {
 };
 
 console.log(solution2(5, stages1));
-console.log(solution2(4, stages2));
+console.log(solution2(5, stages2));
 // Fatal JavaScript invalid size error 169220804
 // FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
