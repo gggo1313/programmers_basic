@@ -61,6 +61,8 @@ function solution2 (N, stages) {
         result.push([i, curr / reach]);
     };
 
+    // 이미 stage가 낮은 순서대로 배열되어 있기 때문에 
+    // 실패율이 같았을 때의 예외처리 해주지 않아도 됨
     result.sort((a, b) => b[1] - a[1]);
     
     console.log("Sol2");
