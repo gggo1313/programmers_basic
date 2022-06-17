@@ -10,7 +10,6 @@ function solution (board, moves) {
     for (let i = 0; i < moves.length; i++) {
         for (let j = 0; j < board.length; j++) {
             if (board[j][moves[i] - 1] !== 0) {
-                console.log(board[j][moves[i] - 1]);
                 let doll = board[j][moves[i] - 1];
                 board[j][moves[i] - 1] = 0;
                 
