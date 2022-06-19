@@ -32,6 +32,7 @@ function solution (n) {
 // console.log(solution(12));
 
 // 다른 사람 풀이
+// parseInt와 배열 index를 활용
 function change124 (n) {
     return n === 0 ? '' : change124(parseInt((n - 1) / 3)) + [1, 2, 4][(n - 1) % 3];
 };
