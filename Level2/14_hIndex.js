@@ -3,7 +3,6 @@
 // h의 최대값 H-Index를 return
 function solution (citations) {
     citations.sort((a, b) => b - a);
-    console.log(citations);
 
     let h = 0;
 
