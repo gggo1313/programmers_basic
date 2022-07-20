@@ -8,7 +8,8 @@ function solution (n) {
     for (let i = 1; i < n; i++) {
         let leng = fibo.length;
         let next = fibo[leng - 2] + fibo[leng - 1];
-        fibo.push(next % 1234567);
+        // overflow 고려하여 이 단계에서 1234567로 나눈 나머지를 추가
+        fibo.push(next % 1234567); 
     };
 
     const answer = fibo[n];
