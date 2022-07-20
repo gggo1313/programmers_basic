@@ -12,7 +12,6 @@ function solution (N, works) {
     for (let i = 1; i <= N; i++) {
         // 1. works 중에서 제일 큰 수를 찾는다
         works.sort((a, b) => a - b);
-        console.log(works);
 
         // 2. 제일 큰 수를 1 깎는다
         works[leng - 1]--;
