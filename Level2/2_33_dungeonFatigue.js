@@ -24,3 +24,4 @@ function solution (k, dungeons) {
 
 console.log(solution(80, [[80, 20], [50, 40], [30, 10]]));
 console.log(solution(40, [[40, 20], [10, 10], [10, 10], [10, 10], [10, 10]]));
+
