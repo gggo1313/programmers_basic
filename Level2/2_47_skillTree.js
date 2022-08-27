@@ -43,7 +43,6 @@ function solution2 (skill, skill_trees) {
         };
         return true;
     };
-    console.log(skill_trees)
 
     return skill_trees.filter(isCorrect).length;
 };
