@@ -7,13 +7,16 @@ function solution (fees, records) {
     const car = {};
     const carNum = [];
     const answer = [];
+    const [basicTime, basicFee, unitTime, unitFee] = fees;
 
     records = records.map((v) => v.split(" "));
 
     for (let i = 0; i < records.length; i++) {
         if (!car[records[i][1]]) {
+            console.log("car: ", car)
             car[records[i][1]] = 0;
             carNum.push(records[i][1]);
+            console.log("Now", car, carNum);
         };
 
         const hour_Minute = records[i][0].split(":");
@@ -27,14 +30,15 @@ function solution (fees, records) {
     };
 
     carNum.sort((a, b) => a - b);
+    console.log(car, carNum);
 
     for (let i = 0; i < carNum.length; i++) {
         if (car[carNum[i]] <= 0) car[carNum[i]] += 1439;
 
         if (car[carNum[i]] < fees[0]) {
-            answer.push(fees[1]);
+            answer.push(basicFee);
         } else {
-            answer.push(fees[1] + Math.ceil((car[carNum[i]] - fees[0]) / fees[2]) * fees[3]);
+            answer.push(basicFee + Math.ceil((car[carNum[i]] - basicTime) / unitTime) * unitFee);
         };
     };
 
@@ -45,10 +49,12 @@ function solution (fees, records) {
 const fees1 = [180, 5000, 10, 600];
 const fees2 = [120, 0, 60, 591];
 const fees3 = [1, 461, 1, 10];
+const fees4 = [1, 10, 1, 11];
 const records1 = ["05:34 5961 IN", "06:00 0000 IN", "06:34 0000 OUT", "07:59 5961 OUT", "07:59 0148 IN", "18:59 0000 IN", "19:09 0148 OUT", "22:59 5961 IN", "23:00 5961 OUT"];
 const records2 = ["16:00 3961 IN","16:00 0202 IN","18:00 3961 OUT","18:00 0202 OUT","23:58 3961 IN"];
 const records3 = ["00:00 1234 IN"];
-
+const records4 = ["00:00 1234 IN", "00:02 1234 OUT"];
 console.log(solution(fees1, records1));
 console.log(solution(fees2, records2));
 console.log(solution(fees3, records3));
+console.log(solution(fees4, records4));
