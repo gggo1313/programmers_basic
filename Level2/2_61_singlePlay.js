@@ -77,6 +77,7 @@ const dfs = (cards, start, depth = 0) => {
 const solution2 = (cards) => {
     for (let i = 1; i <= cards.length; i++) {
         dfs(cards, i);
+        console.log(visited);
     };
 
     return record[0] * record[1];
